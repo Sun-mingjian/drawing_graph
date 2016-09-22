@@ -1,38 +1,52 @@
+<html ng-app='app'>
 
-<html ng-app = 'app'>
-   
-   <head>
-      <title>AngularJS Directives</title>
-    
-       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <title>AngularJS Directives</title>
 
-       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-       <script src="Controller/index.js"></script>
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-      
-       
-   </head>
-    
-   <body ng-controller = 'final'>
-       <form ng-submit="submit()">
-            <div>{{firstName}}</div>
-           <div>
-            Type <input ng-model="graphType" value='ddd'>
-           </div>
-           <div>
-            National <input ng-model='nationalValue' value="80333">
-           </div>
-           <div>
-            Regional <input ng-model="regionalValue" value="50">
-           </div>
-           <div>
-            Dealer <input ng-model="dealerValue" value="100">
-           </div>
-           <graph>
-           </graph>
-           <button value="Ok">Submit</button>
-       </form>
-       
-   </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script src="Controller/index.js"></script>
+
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="Controller/graph.js"></script>
+</head>
+
+<body ng-controller='final'>
+    <form ng-submit="submit()">
+        <div>{{firstName}}</div>
+        <div>
+            Type
+            <input ng-model="graphType" value='ddd'>
+        </div>
+        <div>
+            National
+            <input ng-model='nationalValue' value="80333">
+        </div>
+        <div>
+            Regional
+            <input ng-model="regionalValue" value="50">
+        </div>
+        <div>
+            Dealer
+            <input ng-model="dealerValue" value="100">
+        </div>
+
+        <graph></graph>
+
+        <button value="Ok">Submit</button>
+    </form>
+
+</body>
+
 </html>

@@ -5,8 +5,11 @@ controller('final', ['$scope', function($scope) {
           alert($scope.graphType);
         }
       };
+    $scope.graphDiv = "graphDiv";
+    
+    
       }
-    ]);
+]);
 
 
 app.directive('graph', function () {

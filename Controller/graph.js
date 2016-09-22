@@ -1,3 +1,4 @@
+
 $(function () {
 
     // Uncomment to style it like Apple Watch
@@ -22,7 +23,7 @@ $(function () {
     }
     // */
 
-    Highcharts.chart('container', {
+    Highcharts.chart('graphDiv', {
 
         chart: {
             type: 'solidgauge',
