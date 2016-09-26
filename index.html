@@ -14,38 +14,12 @@
 
     <script src="Controller/index.js"></script>
 
-
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="Controller/graph.js"></script>
 </head>
 
-<body ng-controller='final'>
-    <form ng-submit="submit()">
-        <div>{{firstName}}</div>
-        <div>
-            Type
-            <input ng-model="graphType" value='ddd'>
-        </div>
-        <div>
-            National
-            <input ng-model='nationalValue' value="80333">
-        </div>
-        <div>
-            Regional
-            <input ng-model="regionalValue" value="50">
-        </div>
-        <div>
-            Dealer
-            <input ng-model="dealerValue" value="100">
-        </div>
+<body ng-controller='ctrl'>
+    <user-info-card user="user1"></user-info-card>
+    <user-info-card user="user2"></user-info-card>
 
-        <graph></graph>
-
-        <button value="Ok">Submit</button>
-    </form>
 
 </body>
 

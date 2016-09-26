@@ -1,0 +1,19 @@
+   
+<div class="panel panel-primary">
+    <div class="panel-heading" ng-click="collapse()">{{user.name}}
+    </div>
+    <div class="panel-body" ng-hide="collapsed">
+        
+        <address></address>
+       
+        <h4>Friends</h4>
+        <ul ng-repeat="friend in user.friends">
+            <li>{{friend}}</li>
+        </ul>
+    </div>
+    <div ng-show="user.rank">
+        {{user.rank}}
+    </div>
+    <button class="btn btn-success" ng-show="!user.rank" ng-click="getRank(user)">Get Rank</button>
+</div>
+
