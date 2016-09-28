@@ -26,9 +26,8 @@ app.controller('ctrl', ['$scope', function ($scope) {
             },
             friends: [
            "lida", "jack", "brad"
-       ]
-
-        }
+       ]}
+        
 }
 ]);
 
@@ -47,6 +46,13 @@ app.directive('userInfoCard', function () {
             }
             $scope.collapse = function () {
                 $scope.collapsed = !$scope.collapsed;
+            }
+            $scope.removeFriend = function(friend){
+                var idx = $scope.user.friends.indexOf(friend);
+                if(idx>-1){
+                    $scope.user.friends.splice(idx,1);
+                }
+                
             }
 
         }
@@ -73,3 +79,28 @@ app.directive('address', function () {
         }
     }
 });
+
+
+app.directive('removeFriend',function(){
+    return{
+        templateUrl: 'View/removeFriend.html',
+        restrict: 'E',
+        scope:{
+            notifyParent :"&method"
+        },
+        controller: function($scope){
+            $scope.removing = false;
+            $scope.cancelRemoving = function(){
+                 $scope.removing = false;
+            }
+            $scope.confirmRemoving = function(){
+                 $scope.notifyParent();
+            }
+            $scope.startRemoving = function(){
+                $scope.removing = true;
+            }
+            
+        }
+        
+    }
+})

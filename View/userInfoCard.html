@@ -8,7 +8,9 @@
        
         <h4>Friends</h4>
         <ul ng-repeat="friend in user.friends">
-            <li>{{friend}}</li>
+            <li>{{friend}}
+            <remove-friend method="removeFriend(friend)"></remove-friend>
+            </li>
         </ul>
     </div>
     <div ng-show="user.rank">
